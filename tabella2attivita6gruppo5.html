@@ -1,0 +1,52 @@
+<html>
+<title> Pagina web </title>
+<head>
+<script type = "text/javascript">
+function funzioneTabella()
+{
+var i;
+var j;
+var n;
+var t=0;
+document.write("<table border = '1'>");
+for(i=0;i<=10;i++)
+{
+if(i!=0)
+{
+document.write("<tr><th>["+i+"]</th>");
+}
+for(j=0;j<=10;j++)
+{
+if(i==0)
+{
+if(i==0&&j==0&&t==0)
+{
+t=1;
+document.write("<th>*</th>");
+}
+else
+{
+document.write("<th>["+j+"]</th>");
+}
+}
+else
+{
+if(j==0)
+{
+j=1;
+}
+document.write("<td>"+i*j+"</td>");
+}
+}
+document.write("</tr>");
+}
+}
+</script>
+</head>
+<body>
+<form id = "FormDati" actions "" methods = "">
+<input type="button" value = "Tabella" onclick = "funzioneTabella()" />
+</table>
+</form>
+</body>
+</html>
